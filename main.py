@@ -1,6 +1,6 @@
 def menu():
-    print("++++++++++++++++++++++++++++++++++++++++++++++")
-    print("Baseball Team Management Program")
+    print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    print("\t\tBaseball Team Management Program")
     print("MENU OPTIONS")
     print(
         "1 - Display lineup\n"
@@ -14,8 +14,7 @@ def menu():
     print("POSITIONS")
     print("C, 1B, 2B, 3B, SS, LF, CF, RF, P")
 
-    print("++++++++++++++++++++++++++++++++++++++++++++++\n")
-    print()
+    print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
 
 def main():
