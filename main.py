@@ -65,6 +65,7 @@ def main():
             exit()
         else:
             print("Invalid Menu Selection\n")
+            menu()
 
 
 main()
