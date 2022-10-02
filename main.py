@@ -2,8 +2,6 @@ from click import edit
 
 
 def menu():
-    print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-    print("\t\tBaseball Team Management Program")
     print("MENU OPTIONS")
     print(
         "1 - Display lineup\n"
@@ -14,10 +12,6 @@ def menu():
         + "6 - Edit player stats \n"
         + "7 - Exit program\n"
     )
-    print("POSITIONS")
-    print("C, 1B, 2B, 3B, SS, LF, CF, RF, P")
-
-    print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 
 def display_lineup():
@@ -45,7 +39,14 @@ def edit_player_stats():
 
 
 def main():
+    print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    print("\t\tBaseball Team Management Program")
     menu()
+    print("POSITIONS")
+    print("C, 1B, 2B, 3B, SS, LF, CF, RF, P")
+
+    print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
+
     player_information = []
     while True:
         user_selection = int(input("Menu option: "))
