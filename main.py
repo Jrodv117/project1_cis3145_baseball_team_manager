@@ -46,6 +46,7 @@ def edit_player_stats():
 
 def main():
     menu()
+    player_information = []
     while True:
         user_selection = int(input("Menu option: "))
         if user_selection == 1:
