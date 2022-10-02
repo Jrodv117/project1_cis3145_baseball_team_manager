@@ -47,7 +47,18 @@ def main():
 
     print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
-    player_information = []
+    player_information = [
+        ["Trevor", "SS", "588", "173"],
+        ["Garrett", "2B", "299", "74"],
+        ["Tony", "C", "535", "176"],
+        ["Hunter", "RF", "580", "182"],
+        ["Ian", "CF", "443", "113"],
+        ["Nolan", "3B", "588", "185"],
+        ["Daniel", "1B", "438", "122"],
+        ["David", "LF", "374", "113"],
+        ["Phillip", "P", "102", "12"],
+    ]
+
     while True:
         user_selection = int(input("Menu option: "))
         if user_selection == 1:
