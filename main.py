@@ -17,8 +17,16 @@ def menu():
     print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 
+def display_lineup():
+    print("lineup")
+
+
 def main():
     menu()
+    while True:
+        user_selection = int(input("Menu option: "))
+        if user_selection == 1:
+            display_lineup()
 
 
 main()
