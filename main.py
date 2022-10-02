@@ -1,3 +1,6 @@
+from click import edit
+
+
 def menu():
     print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
     print("\t\tBaseball Team Management Program")
@@ -25,6 +28,22 @@ def add_player():
     print("add player")
 
 
+def remove_player():
+    print("remove player")
+
+
+def move_player():
+    print("move player")
+
+
+def edit_player_position():
+    print("edit player position")
+
+
+def edit_player_stats():
+    print("edit player stats")
+
+
 def main():
     menu()
     while True:
@@ -33,6 +52,18 @@ def main():
             display_lineup()
         elif user_selection == 2:
             add_player()
+        elif user_selection == 3:
+            remove_player()
+        elif user_selection == 4:
+            move_player()
+        elif user_selection == 5:
+            edit_player_position()
+        elif user_selection == 6:
+            edit_player_stats()
+        elif user_selection == 7:
+            exit()
+        else:
+            print("Invalid Menu Selection\n")
 
 
 main()
