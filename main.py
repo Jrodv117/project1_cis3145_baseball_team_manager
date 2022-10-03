@@ -32,8 +32,12 @@ def add_player(player_information, valid_positions):
     print(f"{new_player[0]} was added")
 
 
-def remove_player():
-    print("remove player")
+def remove_player(player_information):
+    lineup_number = int(input("Enter a line up number to remove: "))
+    player = player_information[lineup_number - 1]
+    player_information.pop(lineup_number - 1)
+    print(player_information)
+    print(f"{player[0]} was removed")
 
 
 def move_player():
@@ -77,7 +81,7 @@ def main():
         elif user_selection == 2:
             add_player(player_information, valid_positions)
         elif user_selection == 3:
-            remove_player()
+            remove_player(player_information)
         elif user_selection == 4:
             move_player()
         elif user_selection == 5:
