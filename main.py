@@ -1,4 +1,4 @@
-from click import edit
+from numpy import place
 
 
 def menu():
@@ -47,12 +47,20 @@ def move_player(player_information):
     player_information.insert(
         int(input("Enter a new lineup number: ")) - 1, current_player_at_index
     )
-
     print(f"{player_information}")
 
 
-def edit_player_position():
+def edit_player_position(player_information, valid_positions):
+    lineup_number = int(input("Enter a lineup number to edit"))
+    player_at_index = player_information[lineup_number - 1]
+    print(f"You selected {player_at_index[0]} POS={player_at_index[1]}")
     print("edit player position")
+    position = input("Enter a new position: ")
+    while position not in valid_positions:
+        position = input("Enter a valid position: ")
+    player_at_index.pop(1)
+    player_at_index.insert(1, position)
+    print(player_at_index)
 
 
 def edit_player_stats():
@@ -92,7 +100,7 @@ def main():
         elif user_selection == 4:
             move_player(player_information)
         elif user_selection == 5:
-            edit_player_position()
+            edit_player_position(player_information, valid_positions)
         elif user_selection == 6:
             edit_player_stats()
         elif user_selection == 7:
