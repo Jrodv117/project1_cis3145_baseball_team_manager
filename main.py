@@ -40,8 +40,15 @@ def remove_player(player_information):
     print(f"{player[0]} was removed")
 
 
-def move_player():
-    print("move player")
+def move_player(player_information):
+    current_index = int(input("enter a current lineup number to move: "))
+    current_player_at_index = player_information[current_index - 1]
+    print(f"{current_player_at_index[0]} was selected.")
+    player_information.insert(
+        int(input("Enter a new lineup number: ")) - 1, current_player_at_index
+    )
+
+    print(f"{player_information}")
 
 
 def edit_player_position():
@@ -83,7 +90,7 @@ def main():
         elif user_selection == 3:
             remove_player(player_information)
         elif user_selection == 4:
-            move_player()
+            move_player(player_information)
         elif user_selection == 5:
             edit_player_position()
         elif user_selection == 6:
