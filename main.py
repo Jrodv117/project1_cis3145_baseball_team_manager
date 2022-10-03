@@ -18,8 +18,18 @@ def display_lineup():
     print("lineup")
 
 
-def add_player():
-    print("add player")
+def add_player(player_information, valid_positions):
+    new_player = []
+    new_player.append(input("Enter Player Name: "))
+    position = input("Enter Player Position: ")
+    while position not in valid_positions:
+        position = input("Enter a valid position: ")
+    new_player.append(position)
+    new_player.append(input("Enter At Bats: "))
+    new_player.append(input("Enter hits: "))
+    player_information.append(new_player)
+    print(player_information)
+    print(f"{new_player[0]} was added")
 
 
 def remove_player():
@@ -59,12 +69,13 @@ def main():
         ["Phillip", "P", "102", "12"],
     ]
 
+    valid_positions = ("C", "1B", "2B", "3B", "SS", "LF", "CF", "RF", "P")
     while True:
         user_selection = int(input("Menu option: "))
         if user_selection == 1:
             display_lineup()
         elif user_selection == 2:
-            add_player()
+            add_player(player_information, valid_positions)
         elif user_selection == 3:
             remove_player()
         elif user_selection == 4:
